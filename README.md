@@ -6,6 +6,8 @@ This interactive D3.js dashboard explores the evolution of the video game indust
 
 The project analyzes game sales, regional performance, critical acclaim, and user preferences using interactive, filterable visualizations.
 
+> *This dashboard includes interactive filters for year, genre, and platform. Includes a clear filters button to clear all filters*
+
 ---
 
 ## 📊 Dashboard Overview
