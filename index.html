@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Game Sales Dashboard</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- D3 Library -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- ====================== Sidebar Navigation & Filters ====================== -->
+    <aside class="sidebar">
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="controllerpink.jpeg" alt="Game Controller" />
+      </div>
+
+      <!-- Navigation Buttons -->
+      <nav class="nav-buttons">
+        <button id="salesInsightsBtn" class="nav-btn">Sales Insights</button>
+        <button id="gameQualityBtn" class="nav-btn">Game Quality and Ratings</button>
+      </nav>
+
+      <!-- Filters -->
+      <div class="filters">
+        <label for="yearFilter">Year</label>
+        <select id="yearFilter">
+          <option value="All">All</option>
+        </select>
+
+        <label for="genreFilter">Genre</label>
+        <select id="genreFilter">
+          <option value="All">All</option>
+        </select>
+
+        <label for="platformFilter">Platform</label>
+        <select id="platformFilter">
+          <option value="All">All</option>
+        </select>
+
+        <button id="clearFilters" class="clear-btn">Clear Filters</button>
+      </div>
+    </aside>
+
+    <!-- ====================== Main Dashboard Area ====================== -->
+    <main id="dashboard_page">
+
+      <!-- Title -->
+      <header id="title" class="title">
+        <h1>From Pixels to Profits: A Data Dive into the Gaming World</h1>
+      </header>
+
+      <!-- ========== Sales Insights Section ========== -->
+      <section id="sales-dashboard" class="viz-section">
+        
+        <!-- Charts -->
+        <section id="sales-container" class="charts-container">
+          <div class="chart-box" id="chart-top-selling">Top Global Best-Selling Games</div>
+          <div class="chart-box" id="chart-region-sales">Sales Copies Distribution by Region</div>
+          <div class="chart-box" id="chart-genre-trend">Cumulative Genre Sales Over Year</div>
+          <div class="chart-box" id="chart-platform-bubble">Platform Sales Copies Comparison</div>
+        </section>
+        
+        <!-- KPIs -->
+        <section id="kpi-container" class="kpi-container">
+          <div class="kpi-pill">
+            <div class="kpi-label">Total Sales Copies</div>
+            <div class="kpi-value" id="total-sales"></div>
+          </div>
+          <div class="kpi-pill">
+            <div class="kpi-label">Top Platform</div>
+            <div class="kpi-value" id="top-platform"></div>
+          </div>
+          <div class="kpi-pill">
+            <div class="kpi-label">Top Genre</div>
+            <div class="kpi-value" id="top-genre"></div>
+          </div>
+          <div class="kpi-pill">
+            <div class="kpi-label">Top Title Game</div>
+            <div class="kpi-value" id="top-title"></div>
+          </div>
+          <div class="kpi-pill">
+            <div class="kpi-label">Top Developer</div>
+            <div class="kpi-value" id="top-developer"></div>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- ========== Game Quality & Ratings Section ========== -->
+      <section id="quality-dashboard" class="charts-container hidden">
+        <div class="chart-box" id="chart-critic-score">Critic & User Relation</div>
+        <div class="chart-box" id="chart-review-volume">Review Volume vs Score</div>
+        <div class="chart-box" id="chart-top-rated">Top Rated Publisher</div>
+        <div class="chart-box" id="chart-rating-distribution">Rating Distribution by Genre</div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- JavaScript Module -->
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>
